@@ -1,7 +1,7 @@
 # PID control
 
 [//]: # (Image References) 
-[image1]: ./images/PID_control.png
+[image1]: ./images/PID_Control.png
 [image2]: ./images/IRL.png
 
 A PID controller stands for Proportional-Integral-Derivative controller. It is typically is a control loop used in industrial applications and can be extended to applications such as
