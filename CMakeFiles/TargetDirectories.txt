@@ -1,3 +1,0 @@
-/Users/srikanth.vidapanakal/temp/PID-control/CMakeFiles/rebuild_cache.dir
-/Users/srikanth.vidapanakal/temp/PID-control/CMakeFiles/edit_cache.dir
-/Users/srikanth.vidapanakal/temp/PID-control/CMakeFiles/pid.dir
