@@ -6,7 +6,7 @@
 
 // for convenience
 using json = nlohmann::json;
-static const  bool training_mode = true;
+static const  bool training_mode = false;
 
 // For converting back and forth between radians and degrees.
 constexpr double pi() { return M_PI; }
@@ -40,12 +40,11 @@ int main()
   std::cout << "Starting pid init." << std::endl;
   pid.Init(0.1, 0.1, 0.1);
   //pid.Init(0.2, 0.001, 3.1); // Working 1 
-  
   //pid.Init(0.3, 0.001, 5.3); // Working 2
+  //pid.Init(0.2, 0.0001, 3.0); // Working 3
+  //pid.Init(0.199608, 0.0003, 3.0); // Working 4
   
-   pid.Init(0.2, 0.0001, 3.0); // Working 3
-  
-  //pid.Init(0.199608, 0.0003, 3.0);
+  pid.Init(0.199608, 0.00003, 3.0);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
@@ -74,10 +73,10 @@ int main()
 
 	  pid.UpdateError(cte);
 	  steer_value = pid.TotalError();
-	  pid.AppendMovingWindow(steer_value);
+	  /*pid.AppendMovingWindow(steer_value);
 
 	  if (pid.getTimeSteps() > 2000)
-		  steer_value = pid.getMovingAverage();
+		  steer_value = pid.getMovingAverage();*/
           
           // DEBUG
           std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
@@ -86,7 +85,7 @@ int main()
           msgJson["steering_angle"] = steer_value;
 
 	  if (!training_mode)
-	   	msgJson["throttle"] = (1 - std::abs(steer_value)) * 0.25 + 0.15;
+	   	msgJson["throttle"] = (1 - std::abs(steer_value)) * 0.25 + 0.11;
 	  else 
 	  {
 	  	if (pid.getTimeSteps() > 25000)

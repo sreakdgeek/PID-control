@@ -1,4 +1,4 @@
-# Install script for directory: /Users/srikanth.vidapanakal/CarND-PID-Control-Project
+# Install script for directory: /Users/srikanth.vidapanakal/temp/PID-control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/srikanth.vidapanakal/CarND-PID-Control-Project/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/srikanth.vidapanakal/temp/PID-control/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

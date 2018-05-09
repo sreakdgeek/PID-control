@@ -30,7 +30,7 @@ void PID::Init(double Kp_, double Ki_, double Kd_) {
 
 	training_steps = 100;
 	eval_steps = 2500;
-	is_twiddle_required = true;
+	is_twiddle_required = false;
 	best_error = max_val;
 	total_error = 0.0;
 	
