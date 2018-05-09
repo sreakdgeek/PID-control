@@ -50,11 +50,12 @@ reward function is learnt. Using the learnt reward function, control policy is l
 
 ### Result Videos
 
-Final Video Link   : https://www.youtube.com/watch?v=MALRyioEJ6g&feature=youtu.be
+Final Video Link   : https://youtu.be/AFSCNh7Ay7s (without moving average)
+
+Final Video Link   : https://www.youtube.com/watch?v=MALRyioEJ6g&feature=youtu.be (with moving average)
 
 Training Video Link: https://www.youtube.com/watch?v=RQtmkp1aVII&feature=youtu.be 
 
 
 ---
 
-### References
